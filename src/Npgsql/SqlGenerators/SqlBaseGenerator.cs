@@ -11,7 +11,13 @@ using System.Data.Metadata.Edm;
 #endif
 using System.Linq;
 
+using Npgsql;
+
+#if ENTITIESNS6
+namespace NpgsqlEF6.SqlGenerators
+#else
 namespace Npgsql.SqlGenerators
+#endif
 {
     internal abstract class SqlBaseGenerator : DbExpressionVisitor<VisitedExpression>
     {

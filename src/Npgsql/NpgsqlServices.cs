@@ -11,9 +11,19 @@ using System.Data.Entity.Core.Metadata.Edm;
 using System.Data.Common.CommandTrees;
 using System.Data.Metadata.Edm;
 #endif
+#if ENTITIESNS6
+using NpgsqlEF6.SqlGenerators;
+#else
 using Npgsql.SqlGenerators;
+#endif
 
+using Npgsql;
+
+#if ENTITIESNS6
+namespace NpgsqlEF6
+#else
 namespace Npgsql
+#endif
 {
     internal class NpgsqlServices : DbProviderServices
     {

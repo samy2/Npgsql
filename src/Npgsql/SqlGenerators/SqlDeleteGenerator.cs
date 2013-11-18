@@ -8,7 +8,13 @@ using System.Data.Entity.Core.Common.CommandTrees;
 using System.Data.Common.CommandTrees;
 #endif
 
+using Npgsql;
+
+#if ENTITIESNS6
+namespace NpgsqlEF6.SqlGenerators
+#else
 namespace Npgsql.SqlGenerators
+#endif
 {
     internal class SqlDeleteGenerator : SqlBaseGenerator
     {

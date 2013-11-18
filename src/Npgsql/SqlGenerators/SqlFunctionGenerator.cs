@@ -11,7 +11,14 @@ using System.Data.Common.CommandTrees;
 using System.Data.Metadata.Edm;
 #endif
 
-namespace Npgsql.SqlGenerators {
+using Npgsql;
+
+#if ENTITIESNS6
+namespace NpgsqlEF6.SqlGenerators 
+#else
+namespace Npgsql.SqlGenerators
+#endif
+{
     internal class SqlFunctionGenerator : SqlBaseGenerator {
         private DbFunctionCommandTree _commandTree;
 

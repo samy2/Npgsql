@@ -12,7 +12,11 @@ using System.Data.Metadata.Edm;
 using System.Xml;
 using System.Data;
 
+#if ENTITIESNS6
+namespace NpgsqlEF6
+#else
 namespace Npgsql
+#endif
 {
     internal class NpgsqlProviderManifest : DbXmlEnabledProviderManifest
     {

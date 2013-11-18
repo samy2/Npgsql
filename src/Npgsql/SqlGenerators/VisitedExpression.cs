@@ -12,8 +12,15 @@ using System.Data.Common.CommandTrees;
 #endif
 using NpgsqlTypes;
 using System.Data;
+#if ENTITIESNS6
+using Npgsql;
+#endif
 
+#if ENTITIESNS6
+namespace NpgsqlEF6.SqlGenerators
+#else
 namespace Npgsql.SqlGenerators
+#endif
 {
     internal abstract class VisitedExpression
     {
