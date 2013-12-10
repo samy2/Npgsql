@@ -132,7 +132,7 @@ namespace Npgsql
             }
             public override object ConvertTo(ITypeDescriptorContext context, System.Globalization.CultureInfo culture, object value, Type destinationType)
             {
-                return value.ToString();
+                return (value != null) ? value.ToString() : String.Empty;
             }
         }
 
